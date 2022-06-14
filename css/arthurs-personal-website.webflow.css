@@ -2256,9 +2256,8 @@ figcaption {
   }
 
   .image-card-left {
-    height: auto;
+    display: block;
     max-height: none;
-    max-width: 85%;
   }
 
   .link-block-left {
@@ -2284,9 +2283,7 @@ figcaption {
   }
 
   .image-card-right {
-    right: 31.5vw;
-    height: auto;
-    max-width: 85%;
+    right: auto;
   }
 
   .footer {
@@ -2807,6 +2804,31 @@ figcaption {
     width: 60%;
     max-width: 100%;
   }
+
+  .overlay-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    max-height: none;
+    max-width: 85%;
+  }
+
+  .overlay-container-right {
+    right: 31.5vw;
+    display: block;
+    overflow: visible;
+    height: auto;
+    max-width: 85%;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2827,7 +2849,8 @@ figcaption {
   }
 
   .image-card-left {
-    max-width: 85%;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .div-block-2 {
@@ -2836,6 +2859,11 @@ figcaption {
 
   .link-block-right {
     height: auto;
+  }
+
+  .image-card-right {
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .footer {
@@ -3068,6 +3096,16 @@ figcaption {
     grid-auto-flow: row;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+  }
+
+  .color-overlay {
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+
+  .overlay-container {
+    display: block;
+    overflow: hidden;
   }
 }
 
@@ -3324,6 +3362,8 @@ figcaption {
   .image-with-card-left.pd-top-border {
     overflow: hidden;
     border-top: 1px solid #f77f00;
+    -o-object-fit: fill;
+    object-fit: fill;
   }
 
   .image-with-card-left.dev-vert-border {
@@ -3982,6 +4022,11 @@ figcaption {
     padding: 16px;
   }
 
+  .what-it-about-h6 {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .metadata {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4242,6 +4287,20 @@ figcaption {
   .link-right-arrow {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .overlay-container {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .overlay-container-right {
+    right: auto;
+    width: 100vw;
+    height: 100vw;
+    max-height: 100vw;
+    max-width: 100vw;
   }
 
   .spacer-40-24 {
